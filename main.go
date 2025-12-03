@@ -115,6 +115,7 @@ func NewPostgresDB(cfg *PostgresConfig) (*gorm.DB, error) {
 	return db, nil
 }
 
+// Close 关闭数据库连接
 func Close() error {
 	if DB != nil {
 		sqlDB, err := DB.DB()
